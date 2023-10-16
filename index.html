@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stop The Loss Tool</title>
+    <title>Beacon Slider</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <h1>STOP THE LOSS</h1>
-        <div id="logo-section">
-            <img src="BeaconLogo-Full-Color-Small.png" alt="Beacon Capital Management Logo">
-            <p>A Subtitle or Tagline Here</p>
+
+    <div class="container">
+        <img src="BeaconLogo-Full-Color-Small.png" alt="Beacon Logo" id="beacon-logo">
+
+        <div class="slider-container">
+            <label for="lossSlider">Amount of Loss</label>
+            <input type="range" min="10" max="50" step="5" value="10" id="lossSlider">
+            <div class="values">
+                <div id="lossValue" class="amount-of-loss">10%</div>
+                <div id="returnValue" class="return-to-break-even">11.1%</div>
+                <div id="yearsValue" class="years-to-break-even">1.1</div>
+            </div>
         </div>
-    </header>
-    <main>
-        <input type="range" min="0" max="50" value="0" id="lossSlider">
-        <p id="result">0% Loss requires 0% Gain to break even.</p>
-    </main>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
